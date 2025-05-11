@@ -22,7 +22,7 @@ alert("All information are maintaroy")
     localStorage.setItem("name",input.name)
     localStorage.setItem("email",input.email)
     localStorage.setItem("password",input.password)
-    window.open("/Employeelist")
+   window.open("/Employeelist")
  }
 }
     return(<>
