@@ -1,12 +1,13 @@
 import { useState } from "react"
-import { Link } from "react-router-dom";
+import { Link, useNavigate  } from "react-router-dom";
 function Singin(){
     const data={
         name:"",
         email:"",
         password:"",
     }
-     const[input,setinput]=useState(data)
+     const[input,setinput]=useState(data);
+     const navigate = useNavigate();
 const handelinput =(e)=>{
 setinput({...input,[e.target.name]:e.target.value})
 }
@@ -22,7 +23,8 @@ alert("All information are maintaroy")
     localStorage.setItem("name",input.name)
     localStorage.setItem("email",input.email)
     localStorage.setItem("password",input.password)
-   window.open("/Employeelist")
+//    window.open("/Employeelist")
+   navigate("/Employeelist")
  }
 }
     return(<>
